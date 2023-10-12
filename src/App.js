@@ -14,6 +14,12 @@ function App() {
     setInput(input + val)
   };
 
+  const borrar = () => {
+    if (input.length > 0) {
+      setInput(input.slice(0, -1));
+    }
+  };
+
   const calcularResultado = () => {
     if (input) {
       setInput(evaluate(input));
@@ -51,7 +57,7 @@ function App() {
         <Boton manejarClic={agregarInput}>*</Boton>
         </div>
         <div className='fila'>
-        <Boton manejarClic={calcularResultado}>=</Boton>
+        <Boton id='boton-delete' manejarClic={borrar}>X</Boton>
         <Boton manejarClic={agregarInput}>0</Boton>
         <Boton manejarClic={agregarInput}>.</Boton>
         <Boton manejarClic={agregarInput}>/</Boton>
@@ -60,6 +66,7 @@ function App() {
           <BotonClear manejarClear={() => setInput('')}>
             Clear
           </BotonClear>
+          <Boton manejarClic={calcularResultado}>=</Boton>
         </div>
       </div>
     </div>
