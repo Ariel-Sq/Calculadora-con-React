@@ -37,3 +37,23 @@
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width: 428px) {
+
+    .App {
+        height: 80%;
+    }
+
+    .contenedor-calculadora {
+        width: 80%;
+        height: 514px;
+        margin-top: -320px;
+    }
+    .freecodecamp-logo-contenedor {
+        margin-bottom: auto;
+    }
+    .freecodecamp-logo {
+        height: 24px;
+        margin-bottom: 20px;
+    }
+}

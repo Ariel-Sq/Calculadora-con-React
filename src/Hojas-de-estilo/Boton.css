@@ -27,5 +27,11 @@
   background-color: #ff6600;
 }
 
+@media (max-width:428px) {
+  .boton-contenedor {
+    height: 60px;
+  }
+}
+
 
 
